@@ -110,7 +110,7 @@ const BetPool = () => {
         {bets.length ? null : renderNoBets()}
       </div>
       {bets.length ? <button className="BetPool__roll" onClick={maxAmountOverflow ? undefined : onRollClick} disabled={maxAmountOverflow}>
-        {maxAmountOverflow ? `Max bet is $${maxBetAmount.toFixed(2)}` : <>Roll <Dice /></>}
+        { maxAmountOverflow ? `Max bet is $${maxBetAmount.toFixed(2)}` : <>Roll <Dice /></>}
       </button> : null}
     </div>
   );

@@ -72,6 +72,7 @@ const AddLiquidityDialog = function ({opened, onClose}: {opened: boolean, onClos
   const addLiquidity = useCallback(async (signatureParams: any[]) => {
     const addLiquidityTx = await networkHelper.addLiquidity(amountWei, ...signatureParams);
     await addLiquidityTx.wait(1);
+    console.log("addLiquidityTx", addLiquidityTx);
     onClose();
     dispatch(updateNetwork(web3React));
   }, [networkHelper, amountWei, onClose]);
